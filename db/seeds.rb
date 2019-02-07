@@ -1,0 +1,185 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+Product.delete_all
+Type.delete_all
+Category.delete_all
+Designer.delete_all
+
+Clothe = Category.create({name:"Clothes"})
+Shoes = Category.create({name:"Shoes"})
+Bags = Category.create({name:"Bags"})
+Accessories = Category.create({name:"Accessories"})
+
+alexander = Designer.create({name: "ALEXANDER MCQUEEN"})
+balenciaga = Designer.create({name: "BALENCIAGA"})
+dolce = Designer.create({name: "DOLCE & GABBANA"})
+gucci = Designer.create({name: "GUCCI"})
+toryBurch = Designer.create({name: "TORY BURCH"})
+
+dress = Type.create({name: "Dress", category: Clothe })
+jacket = Type.create({name: "Jacket", category: Clothe })
+jeans = Type.create({name: "Jeans", category: Clothe }) 
+skirt = Type.create({name: "Skirt", category: Clothe })
+top =Type.create({name: "Top", category: Clothe })
+
+pump = Type.create({name: "PUMPS", category: Shoes })
+sandal = Type.create({name: "SANDALS", category: Shoes })
+slipper = Type.create({name: "SLIPPERS", category: Shoes })
+sneaker = Type.create({name: "SNEAKERS", category: Shoes })
+
+
+backpack = Type.create({name: "BACKPACKS", category: Bags })
+minibag = Type.create({name: "MINI BAGS", category: Bags })
+shoulder = Type.create({name: "SHOULDER BAGS", category: Bags })
+vintage = Type.create({name: "VINTAGE BAGS", category: Bags })
+crossbody = Type.create({name: "CROSSBODY BAGS", category: Bags })
+
+
+sunglasses = Type.create({name: "SUNGLASSES", category: Accessories })
+bracelets = Type.create({name: "BRACELETS", category: Accessories })
+necklace = Type.create({name: "NECKLACES", category: Accessories })
+rings = Type.create({name: "RINGS", category: Accessories })
+earring = Type.create({name: "EARRINGS", category: Accessories })
+
+
+#Clothes 
+Product.create({name: "off shoulder" , description: "Bora Bora Long Strapless Dress" , type:dress , designer:alexander , quantity: 600, price: 25, image:"https://cdn-images.farfetch-contents.com/13/00/27/04/13002704_14752413_480.jpg"})
+ Product.create({name: "Western Sandals" , description: "Brown Anaconda" , type:sandal , designer:alexander , quantity: 200 , price: 24 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/renen/renen3005113fce/renen3005113fce_q6_2-0._UX357_QL90_.jpg"})
+ Product.create({name: "Fleming Backpack" , description: "Royal Navy ", type:backpack , designer:balenciaga , quantity: 100 , price: 55 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/toryb/toryb4656114178/toryb4656114178_q6_2-0._UX357_QL90_.jpg"})
+ Product.create({name: "Shoshanna" , description:"Edgecombe Dress  " , type:dress , designer: alexander , quantity: 300 , price: 150 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/shosh/shosh4139413022/shosh4139413022_q6_2-0._UX357_QL90_.jpg"})
+Product.create({name: "shade Dress" , description: "IRO" , type:dress , designer: balenciaga  , quantity: 100 , price: 70 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/irooo/irooo4132111231/irooo4132111231_q1_2-0._UX357_QL90_.jpg"})
+Product.create({name: "Free People" , description:"Chambray Butterflies Midi Dress" , type: dress , designer: alexander  , quantity: 200 , price: 60 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/freep/freep4468113149/freep4468113149_q1_2-0._UX357_QL90_.jpg"})
+ Product.create({name: "re:named" , description: "Remy Polka Day Dress" , type:dress , designer: balenciaga , quantity: 150, price: 50 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/namel/namel3029111b23/namel3029111b23_q6_2-0._UX357_QL90_.jpg"})
+Product.create({name: "Innika Choo" , description:"Iva Biigdres Dress" , type:dress , designer:alexander , quantity: 50 , price: 88 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/innik/innik3001912601/innik3001912601_q6_2-0._UX357_QL90_.jpg"})
+ Product.create({name:"Glamorous" , description:"Metallic Strapless Dress" , type:dress , designer:balenciaga , quantity: 50 , price: 120 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/glams/glams30195125f3/glams30195125f3_q6_2-0._UX357_QL90_.jpg"})
+Product.create({name: "Temperley London" , description: "Safari Printed Wrap Dress" , type:dress , designer:balenciaga , quantity: 60 , price: 80 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/templ/templ405771071b/templ405771071b_q1_2-1._UX357_QL90_.jpg"})
+Product.create({name: "LIKELY" , description:"Melanie Dress" , type:dress , designer:alexander , quantity: 40 , price: 78 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/likel/likel3032910c4d/likel3032910c4d_q6_2-0._UX357_QL90_.jpg"})
+ Product.create({name: "ASTR the Label" , description: "Sawyer Windbreaker" , type:jacket , designer:balenciaga , quantity: 50 , price: 50 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/astrr/astrr300531455d/astrr300531455d_q1_2-0._UX357_QL90_.jpg"})
+Product.create({name:"DL1961" , description:"Clyde Icon Jacket" , type:jacket , designer:alexander , quantity: 30 , price: 40 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/dldll/dldll40573135f3/dldll40573135f3_q1_2-0._UX357_QL90_.jpg"})
+Product.create({name:"Apparis" , description:"Julie Coat" , type:jacket , designer:alexander , quantity: 20 , price: 40 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/appar/appar3001614943/appar3001614943_q1_2-0._UX357_QL90_.jpg"})
+ Product.create({name: "Forte Forte" , description: "Sea Roses Jacquard Coat" , type:jacket , designer:balenciaga , quantity: 10 , price: 120 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/gfort/gfort3013156005/gfort3013156005_q1_2-0._UX357_QL90_.jpg"})
+Product.create({name:"Citizens of Humanity" , description:"Rocket Crop Jeans" , type:jeans , designer:balenciaga , quantity: 40 , price: 120 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/citiz/citiz410231218d/citiz410231218d_q6_2-1._UX357_QL90_.jpg"})
+Product.create({name:"Levi's" , description:"Wedgie Icon Jeans" , type:jeans , designer:alexander , quantity: 20 , price: 40 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/leviv/leviv20464141c9/leviv20464141c9_q6_2-0._UX357_QL90_.jpg"})
+Product.create({name:"MOTHER" , description:"Austin Cropped Jeans" , type:jeans , designer:balenciaga , quantity: 30 , price: 44 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/thrxo/thrxo3044613dad/thrxo3044613dad_q6_2-1._UX357_QL90_.jpg"})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+
+
+## Shoes
+
+
+
+Product.create({name:"Tory Burch" , description:"Kira Multiband Sandals" , type:sandal , designer:toryBurch , quantity: 300 , price: 150 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/toryb/toryb47105138a4/toryb47105138a4_q1_2-0._UX357_QL90_.jpg"})
+Product.create({name:"Isa Tapia" , description:"Nile Flat Slides" , type:slipper , designer:toryBurch , quantity: 300 , price: 135 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/isata/isata3016811611/isata3016811611_q1_2-0._UX357_QL90_.jpg"})
+Product.create({name:"Badgley Mischka" , description:"Quintana Pointed Toe Pumps" , type:pump , designer:gucci , quantity: 20 , price: 70 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/badgm/badgm202861071c/badgm202861071c_q6_2-0._UX357_QL90_.jpg"})
+Product.create({name:"Marni" , description:"Mary Jane Pumps" , type:pump , designer:gucci , quantity: 40 , price: 80 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/mardb/mardb3037012d80/mardb3037012d80_q1_2-1._UX357_QL90_.jpg"})
+Product.create({name:"Malone Souliers" , description:"Maureen Pumps" , type:pump , designer:gucci , quantity: 40 , price: 90 , image:"https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/msoul/msoul3008014090/msoul3008014090_q4_2-1._UX357_QL90_.jpg"})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+
+
+
+
+#Bags
+
+
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+# Product.create({name: , description: , type: , designer: , quantity: , price: , image:})
+
+
+#Accesories
